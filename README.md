@@ -2,7 +2,7 @@
 
 <br>
 
-## 常見寫法
+## Standard
 ```
 <type>: [subject]
 
@@ -13,7 +13,7 @@
 
 <br>
 
-## 說明
+## Illustrations
 
 `type 種類`
 > feat 新增擴充
@@ -50,7 +50,7 @@
 
 <br>
 
-## Example
+## Example of use
 
 ```
 feat: UploadFileController上傳檔案功能
