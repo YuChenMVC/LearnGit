@@ -68,7 +68,191 @@ issue #200
 
 <br>
 
+
+# Basic Git commands
+
+<br>
+
+# `git version`
+查看目前git安裝版本
+```git
+$ git version
+```
+查看git詳細安裝資訊
+```git
+$ git version --build-options
+```
+
+<br>
+
+# `git config`
+設定名稱與信箱 (字串中內容為範例)
+```git
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+查看config內容
+```git
+$ git config --list
+```
+
+<br>
+
+# `git init`
+初始化git (會在該目錄資料夾建立Repository)
+```git
+$ git init
+```
+
+<br>
+
+# `git status`
+查看目前git狀態
+```git
+$ git status
+```
+查看目前git分支狀態
+```git
+$ git status --b
+```
+查看目前有哪些untracked檔案
+```git
+$ git status --untracked-files
+```
+
+<br>
+
+# `git add`
+加入變動檔案
+```git
+$ git add Example.cs
+```
+一次加入全部(請先設定.gitignore)
+<br><span style="color: red; ">團隊合作pull時會影響到他人IDE環境,除非知道自己在幹嘛</span>
+```git
+$ git add --all
+```
+
+<br>
+
+# `git commit`
+提交變更
+```git
+$ git commit -m "這串是github或gitlab上會顯示的commit訊息"
+```
+直接add commit(不建議,重傳要rebase有點麻煩)
+```git
+$ git commit -a -m "內容"
+```
+
+<br>
+
+# `git log`
+查看commit提交紀錄
+```git
+$ git log
+```
+簡易版
+```git
+$ git log --oneline
+```
+查看分支圖
+```git
+$ git log --oneline --graph
+```
+
+<br>
+
+# `git diff`
+查看差異(建議GUI比較方便)
+```git
+$ git diff [commit1] [commit2]
+```
+
+<br>
+
+# `git reset`
+重設目前commit位置至指定commit位置(HEAD^表示目前所在分支的前一個commit)
+```git
+$ git reset --hard HEAD^
+```
+
+<br>
+
+# `git branch`
+切出新分支(會從當下位置分支出來)
+```git
+$ git branch [newBranchName]
+```
+查看所有分支
+```git
+$ git branch
+```
+
+<br>
+
+# `git checkout`
+切換分支位置
+<br>
+<br>
+切換到原本master分支
+```git
+$ git checkout master
+```
+再切換回剛剛新分支
+```git
+$ git checkout [newBranchName]
+```
+
+<br>
+
+# `git merge`
+合併分支
+<br><br>
+假定我們在master分支, 要合併[newBranchName]分支
+```git
+$ git merge [newBranchName]
+```
+
+<br>
+
+# `git conflict`
+分支衝突
+```git
+//TODO: 最刺激的部分 待動工
+```
+
+<br>
+
+# `git push`
+推送commit至Github或Gitlab
+```git
+$ git remote add origin https://github.com/[name]/[repo].git
+$ git push origin [branchName]
+```
+
+<br>
+
+# `git pull`
+拉commit至local端
+```git
+$ git pull origin [BranchName]
+```
+pull request
+```git
+//TODO: 待動工
+```
+
+<br>
+
+# `git clone`
+下載repository
+```git
+$ git clone https://github.com/[name]/[repo].git
+```
+
+<br><br>
+
 ## Resources
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)\
 [Contributing to Angular](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type)
-
