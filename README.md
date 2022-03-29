@@ -69,7 +69,7 @@ issue #200
 <br>
 
 
-# Basic Git commands
+# Basic Git Commands
 
 <br>
 
