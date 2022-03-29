@@ -128,7 +128,8 @@ $ git status --untracked-files
 $ git add Example.cs
 ```
 一次加入全部(請先設定.gitignore)
-<br><span style="color: red; ">團隊合作pull時會影響到他人IDE環境,除非知道自己在幹嘛</span>
+<br>
+⚠️團隊合作pull時會影響到他人IDE環境,除非知道自己在幹嘛
 ```git
 $ git add --all
 ```
@@ -141,6 +142,8 @@ $ git add --all
 $ git commit -m "這串是github或gitlab上會顯示的commit訊息"
 ```
 直接add commit(不建議,重傳要rebase有點麻煩)
+<br>
+個人習慣先add暫存再commit,有個緩衝空間
 ```git
 $ git commit -a -m "內容"
 ```
